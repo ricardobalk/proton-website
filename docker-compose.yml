@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  protonmail-website:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    command: dev
+    ports:
+      - 3000:3000
