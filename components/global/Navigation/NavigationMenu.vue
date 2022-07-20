@@ -1,31 +1,17 @@
 <template>
     <nav>
-      <NavigationGroup :items="props.items" class="navRoot" />
+      <NavigationGroup :items="items" class="navRoot" />
     </nav>
 </template>
 
-<script lang="ts">
-    import {                            defineComponent       }   from   "vue";
+<script lang="ts" setup>
     import {  NavigationMenu       as   NavigationMenuType    }   from   "@/models/Navigation";
-    import {                            NavigationGroup       }   from   "@/components/global/Navigation/NavigationGroup.vue";
+    import                              NavigationGroup           from   "@/components/global/Navigation/NavigationGroup.vue";
 
-    export const NavigationMenu = defineComponent({
-        name: 'NavigationMenu',
-        components: {
-            NavigationGroup
-        },
-
-        props: {
-            items: {
-                type: Array as () => NavigationMenuType,
-                required: true
-            }
-        },
-
-        setup(props) {
-            return { props };
+    defineProps({
+        items: {
+            type: Array as () => NavigationMenuType,
+            required: true
         }
     });
-
-    export default NavigationMenu;
 </script>

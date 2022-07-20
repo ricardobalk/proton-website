@@ -1,2 +1,2 @@
-import { SocialLinks } from './SocialLinks.vue';
+import SocialLinks from './SocialLinks.vue';
 export default SocialLinks;

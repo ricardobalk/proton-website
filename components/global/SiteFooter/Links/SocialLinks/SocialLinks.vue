@@ -4,19 +4,7 @@
     </div>
 </template>
 
-<script lang="ts">
-import { SocialLink } from "@/components/global/SiteFooter/Links/SocialLinks/SocialLink.vue";
+<script lang="ts" setup>
+import SocialLink from "@/components/global/SiteFooter/Links/SocialLinks/SocialLink.vue";
 import { SocialLinks as SocialLinksData } from '@/data/Footer/SocialLinks';
-
-export const SocialLinks = defineComponent({
-    name: 'SocialLinks',
-    components: {
-        SocialLink,
-    },
-    setup() {
-        return { SocialLinksData };
-    }
-});
-
-export default SocialLinks;
 </script>

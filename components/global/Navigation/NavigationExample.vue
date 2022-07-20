@@ -1,5 +1,5 @@
 <template>
-    <NavigationMenu :items="items" class="navMenuExample" />
+    <NavigationMenu :items="NavItems" class="navMenuExample" />
 </template>
 
 <style lang="postcss">
@@ -28,22 +28,7 @@
  }
 </style>
 
-<script lang="ts">
-import {                            defineComponent       }  from  'vue';
-import {                            NavigationMenu        }  from  './NavigationMenu.vue';
-import {  ExampleData          as   NavItems              }  from  "@/models/Navigation";
-
-export const NavigationExample = defineComponent({
-    name: 'NavigationExample',
-    components: {
-        NavigationMenu
-    },
-    setup() {
-        return {
-            items: NavItems
-        };
-    }
-});
-
-export default NavigationExample;
+<script lang="ts" setup>
+    import                              NavigationMenu           from  './NavigationMenu.vue';
+    import {  ExampleData          as   NavItems              }  from  "@/models/Navigation";
 </script>

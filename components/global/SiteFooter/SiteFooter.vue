@@ -114,27 +114,11 @@
 }
 </style>
 
-<script lang="ts">
-import { FooterNavigation } from '@/components/global/SiteFooter/Links/FooterNavigation.vue';
-import { LanguageSelector } from '@/components/global/SiteFooter/LanguageSelector.vue';
-import { QuickLinks } from '@/components/global/SiteFooter/Links/QuickLinks.vue';
-import { LegalLinks } from '@/components/global/SiteFooter/Links/LegalLinks.vue';
+<script lang="ts" setup>
+import FooterNavigation from '@/components/global/SiteFooter/Links/FooterNavigation.vue';
+import LanguageSelector from '@/components/global/SiteFooter/LanguageSelector.vue';
+import QuickLinks from '@/components/global/SiteFooter/Links/QuickLinks.vue';
+import LegalLinks from '@/components/global/SiteFooter/Links/LegalLinks.vue';
 import Colofon from '@/components/global/SiteFooter/Colofon';
-import { LogoAndSocial } from './LogoAndSocial.vue';
-
-export const SiteFooter = defineComponent({
-  name: 'SiteFooter',
-  components: {
-    LogoAndSocial,
-    FooterNavigation,
-    Colofon,
-    LanguageSelector,
-    QuickLinks,
-    LegalLinks,
-  },
-  setup() {
-    return {};
-  }
-});
-export default SiteFooter;
+import LogoAndSocial from '@/components/global/SiteFooter/LogoAndSocial.vue';
 </script>

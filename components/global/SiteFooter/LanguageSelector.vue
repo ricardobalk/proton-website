@@ -20,9 +20,9 @@
     </div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
   import { ref } from 'vue'
-  import { GlobalIcon } from '@/components/global/GlobalIcon';
+  import GlobalIcon from '@/components/global/GlobalIcon';
   import {
     Listbox,
     ListboxButton,
@@ -30,36 +30,26 @@
     ListboxOption,
   } from '@headlessui/vue'
 
-  export const LanguageSelector = defineComponent({
-    name: 'LanguageSelector',
-    components: {
-        GlobalIcon, Listbox, ListboxButton, ListboxOptions, ListboxOption
-    },
-    setup(props) {
-        const languages = [
-            { id: 1, name: 'English', unavailable: false },
-            { id: 2, name: 'Deutsch', unavailable: true },
-            { id: 3, name: 'Nederlands', unavailable: true },
-            { id: 4, name: 'Français', unavailable: true },
-            { id: 5, name: 'Español', unavailable: true },
-            { id: 6, name: 'Italiano', unavailable: true },
-            { id: 7, name: 'Português', unavailable: true },
-            { id: 8, name: '中文', unavailable: true },
-            { id: 9, name: '日本語', unavailable: true },
-            { id: 10, name: '한국어', unavailable: true },
-            { id: 11, name: 'Русский', unavailable: true },
-            { id: 12, name: 'Български', unavailable: true },
-            { id: 13, name: 'Українська', unavailable: true },
-            { id: 14, name: 'Српски', unavailable: true },
-            { id: 15, name: 'Узбецкая', unavailable: true },
-            { id: 16, name: 'Торекская', unavailable: true },
-        ]
-        const selectedLanguage = ref(languages[0]);
-        return { languages, selectedLanguage };
-    }
-  });
-
-  export default LanguageSelector;
+    const languages = [
+        { id: 1, name: 'English', unavailable: false },
+        { id: 2, name: 'Deutsch', unavailable: true },
+        { id: 3, name: 'Nederlands', unavailable: true },
+        { id: 4, name: 'Français', unavailable: true },
+        { id: 5, name: 'Español', unavailable: true },
+        { id: 6, name: 'Italiano', unavailable: true },
+        { id: 7, name: 'Português', unavailable: true },
+        { id: 8, name: '中文', unavailable: true },
+        { id: 9, name: '日本語', unavailable: true },
+        { id: 10, name: '한국어', unavailable: true },
+        { id: 11, name: 'Русский', unavailable: true },
+        { id: 12, name: 'Български', unavailable: true },
+        { id: 13, name: 'Українська', unavailable: true },
+        { id: 14, name: 'Српски', unavailable: true },
+        { id: 15, name: 'Узбецкая', unavailable: true },
+        { id: 16, name: 'Торекская', unavailable: true },
+    ]
+    
+    const selectedLanguage = ref(languages[0]);
 </script>
 
 <style lang="postcss">

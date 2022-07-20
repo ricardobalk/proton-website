@@ -27,5 +27,5 @@
 </style>
 
 <script lang="ts" setup>
-import GlobalIcon from '@/components/global/GlobalIcon';
+    import GlobalIcon from '@/components/global/GlobalIcon';
 </script>

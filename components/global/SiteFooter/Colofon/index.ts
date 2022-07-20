@@ -1,2 +1,2 @@
-import { Colofon } from './Colofon.vue';
+import Colofon from './Colofon.vue';
 export default Colofon;

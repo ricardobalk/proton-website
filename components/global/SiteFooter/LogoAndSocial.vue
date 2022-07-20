@@ -12,18 +12,7 @@
     </div>
 </template>
 
-<script lang="ts">
-import { GlobalIcon } from "@/components/global/GlobalIcon";
+<script lang="ts" setup>
+import GlobalIcon from "@/components/global/GlobalIcon";
 import SocialLinks from "@/components/global/SiteFooter/Links/SocialLinks";
-export const LogoAndSocial = defineComponent({
-    name: 'LogoAndSocial',
-    components: {
-        SocialLinks,
-        GlobalIcon,
-    },
-    setup() {
-        return {};
-    }
-});
-export default LogoAndSocial;
 </script>

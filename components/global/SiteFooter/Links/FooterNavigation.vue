@@ -31,21 +31,7 @@
 }
 </style>
 
-<script lang="ts">
-import {                            NavigationMenu  }  from  '@/components/global/Navigation/NavigationMenu.vue';
+<script lang="ts" setup>
+import                              NavigationMenu     from  '@/components/global/Navigation/NavigationMenu.vue';
 import { FooterLinks             as FooterNavItems  }  from  '@/data/Footer/Navigation';
-
-export const FooterNavigation = defineComponent({
-    name: 'FooterNavigation',
-    components: {
-        NavigationMenu
-    },
-    setup() {
-        return {
-            FooterNavItems
-        };
-    }
-});
-
-export default FooterNavigation;
 </script>
