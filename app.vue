@@ -1,28 +1,27 @@
 <template>
-  <div id="app" class="message">
-    <h1 class="hoverable">Hello World</h1>
-    <p class="text-sm">If this message is centered, Nuxt 3 with TailwindCSS is set up correctly.</p>
-  </div>
+  <SiteHeader />
+  <NuxtLayout id="app">
+    <NuxtPage />
+  </NuxtLayout>
+  <SiteFooter />
 </template>
 
 <style lang="postcss">
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+@font-face {
+    font-family: "Arizona";
+    src: url("/ABCArizonaPlusVariable.woff2") format('woff2');
+}
 
-  #app {
-    @apply h-screen text-black;
-    @apply dark:bg-slate-900 dark:text-gray-300;
-  }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  .message {
-    @apply flex flex-col justify-center items-center;
-    h1 {
-      @apply text-4xl mb-4;
-    }
-    .hoverable {
-      @apply transition-colors ease-in-out hover:text-blue-600;
-      @apply dark:hover:text-yellow-300;
-    }
-  }
+#app {
+  @apply m-6;
+}
 </style>
+
+<script setup lang="ts">
+import SiteHeader from '@/components/global/SiteHeader';
+import SiteFooter from '@/components/global/SiteFooter/SiteFooter.vue';
+</script>
