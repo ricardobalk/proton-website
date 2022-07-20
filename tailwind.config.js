@@ -8,7 +8,21 @@ module.exports = {
     "./plugins/**/*.{js,ts}",
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      'sans': ['Arizona', 'sans-serif'],
+    },
+    extend: {
+      colors: {
+        purple: {
+          25: '#f7f5ff',
+          100: '#e2dbff',
+        },
+        proton: {
+          default: '#6D4AFF',
+          dark: '#372580',
+        }
+      }
+    },
   },
   variants: {
     extend: {},
